@@ -1,0 +1,32 @@
+{% load static %}
+
+<footer style="background-color: black; color: white; padding: 20px 0; text-align: center;">
+    <div style="max-width: 100%; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        
+        <!-- Copyright -->
+        <div style="flex: 1; text-align: left; padding: 10px;">
+            <p>&copy; 2025 PopcornReview. All rights reserved.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div style="flex: 1; text-align: right; padding: 10px;">
+            <a href="/" style="color: white; text-decoration: none; margin: 0 10px;">Home</a>
+            <a href="/about/" style="color: white; text-decoration: none; margin: 0 10px;">About</a>
+            <a href="/search/" style="color: white; text-decoration: none; margin: 0 10px;">Search</a>
+        </div>
+
+
+    </div>
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" 
+        style="background: none; color: white; border: none; font-size: 16px; margin-top: 15px; cursor: pointer;">
+        ⬆ Back to Top
+    </button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</footer>

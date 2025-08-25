@@ -1,0 +1,141 @@
+{% include 'navigation.html' %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PopcornReview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .about-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .about-content {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .features {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            margin: 15px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card i {
+            font-size: 36px;
+            color: #ff9800;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Popcorn-Review</h1>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            <h2>What is Popcorn-Review?</h2>
+            <div class="about-content">
+                <p>Popcorn-Review is your go-to platform for discovering and reviewing movies. Whether you're a casual moviegoer or a dedicated cinephile, Popcorn-Review makes it easy to find movies, explore reviews, and share your opinions.</p>
+                <p>Our platform leverages the powerful TMDb API to provide you with up-to-date movie information, including posters, ratings, and detailed descriptions. Popcorn-Review also features an engaging community where users can like and dislike reviews, making it easier to find content that matches your interests.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-search"></i>
+                <h3>Search Movies</h3>
+                <p>Easily search for your favorite movies by name, genre, or release date.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-star"></i>
+                <h3>Rate Movies</h3>
+                <p>Give your own ratings to movies you’ve watched and share your thoughts.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-thumbs-up"></i>
+                <h3>Like/Dislike Reviews</h3>
+                <p>Interact with other users' reviews by liking or disliking them.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <div class="about-content">
+                <p>Our mission is to create a space where movie lovers can come together, discuss their favorite films, and share their honest opinions. With a simple, user-friendly interface and access to a vast collection of movie data, Popcorn-Review is designed to enhance your movie-watching experience.</p>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
+
+{% include 'footer.html' %}

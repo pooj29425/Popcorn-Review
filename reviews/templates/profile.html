@@ -1,0 +1,90 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Popcorn-Review</title>
+    <link rel="stylesheet" href="{% static 'css/user_profile.css' %}">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch; /* Makes the nav take full width */
+            height: 100vh;
+            width: 100%;
+        }        
+        .navigation-container {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .profile-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px auto; 
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3498db;
+        }
+        .username {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .email {
+            font-size: 14px;
+            color: gray;
+        }
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Navigation -->
+    <div class="navigation-container">
+        {% include 'navigation.html' %}
+    </div>
+
+    <!-- Profile Card -->
+    <div class="profile-container">
+        {% if user.userprofile.profile_picture %}
+            <img src="{{ user.userprofile.profile_picture.url }}" alt="Profile Picture" class="profile-picture">
+        {% else %}
+            <img src="{% static 'images/default-profile.png' %}" alt="Default Profile Picture" class="profile-picture">
+        {% endif %}
+
+        <div class="username">{{ user.username }}</div>
+        <div class="email">{{ user.email }}</div>
+        <div class="bio">{{ user.userprofile.bio }}</div>
+        <a href="{% url 'edit_profile' %}">
+            <button class="logout-btn">Edit Profile</button>
+        </a>
+        <a href="{% url 'logout' %}">
+            <button class="logout-btn">Logout</button>
+        </a>
+    </div>
+    
+</body>
+</html>
